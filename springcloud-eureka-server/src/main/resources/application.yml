@@ -1,0 +1,25 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: jerry-eureka-server
+
+eureka:
+  instance: # eureak实例定义
+    hostname: localhost # 定义Eureka实例所在的主机名称
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server: #配置属性，但由于 Eureka 自我保护模式以及心跳周期长的原因，经常会遇到 Eureka Server 不剔除已关停的节点的问题
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+
+security:
+  basic:
+    enabled: true # 启用身份认证
+  user:
+    name: jerry # 定义用户名
+    password: jerry # 定义密码

@@ -1,0 +1,13 @@
+server:
+  port: 8011
+
+spring:
+  application:
+    name: jerry-service-api
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
