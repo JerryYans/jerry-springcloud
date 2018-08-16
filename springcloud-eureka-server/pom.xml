@@ -30,7 +30,8 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <finalName>${project.name}</finalName>
+                    <!--<finalName>${project.name}</finalName>-->
+                    <!--<mainClass>com.jerry.springcloud.eureka.JerryEurekaApplication</mainClass>-->
                 </configuration>
             </plugin>
 
